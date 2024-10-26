@@ -1,4 +1,4 @@
-# VollMed API
+# Clinica API
 Este projeto é uma API para o gerenciamento de médicos, pacientes e consultas, desenvolvido em Java com o framework Spring Boot. 
 
 ## Funcionalidades
