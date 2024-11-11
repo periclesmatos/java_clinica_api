@@ -13,4 +13,5 @@ public record DadosDetalhamentoPaciente(
     public DadosDetalhamentoPaciente(Paciente paciente) {
         this(paciente.getId(), paciente.getNome(), paciente.getEmail(), paciente.getTelefone(), paciente.getCpf(), paciente.getEndereco());
     }
+
 }
