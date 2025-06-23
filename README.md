@@ -1,27 +1,112 @@
-# Clinica API
+# 🏥 Clínica API - Backend em Java com Spring Boot
 
-Este projeto consiste em uma API de gerenciamento de médicos, pacientes e consultas, desenvolvida em Java com o framework Spring Boot. A aplicação é projetada para ser escalável e robusta, utilizando o MySQL como banco de dados relacional para armazenamento eficiente e consultas rápidas.
+Este projeto é uma **API RESTful** para gestão de uma clínica médica, desenvolvida com **Java + Spring Boot**. O sistema permite o cadastro, atualização, listagem e exclusão de pacientes, médicos e agendamentos, utilizando arquitetura limpa e boas práticas do ecossistema Spring.
 
-Para gerenciamento de dependências, o Maven é utilizado, permitindo uma configuração modular e facilitando o processo de build. O Flyway é integrado para realizar o versionamento do banco de dados, garantindo que as alterações de esquema sejam gerenciadas de forma consistente e segura ao longo do ciclo de vida da aplicação.
 
-A biblioteca Lombok é utilizada para simplificar o desenvolvimento, reduzindo a quantidade de código boilerplate através da geração automática de métodos como getters, setters e construtores. Além disso, o projeto implementa mecanismos de autenticação e autorização, utilizando JWT (JSON Web Tokens) para proteger endpoints sensíveis e garantir que apenas usuários autorizados possam acessar determinadas funcionalidades.
+## 🚀 Tecnologias e ferramentas utilizadas
 
-Com essa arquitetura, a API não só atende às necessidades de gerenciamento de dados, mas também assegura a integridade e a segurança das informações dos usuários.
+### 🔧 Backend
+- **Java 17**
+- **Spring Boot 3 (REST, Validation, Data JPA)**
+- **Hibernate / JPA**
+- **Flyway (migrations de banco de dados)**
 
-## Funcionalidades
-- Cadastra, listar, atualizar e deletar medicos.
-- Cadastra, listar, atualizar e deletar pacientes.
-- Agendar e cancelar consultas.
+### 🧪 Testes
+- JUnit 5
+- Mockito
 
-## Tecnologias Utilizadas
+### 🛢️ Banco de dados
+- PostgreSQL (produção)
+- H2 (testes)
 
-- Java 17
-- Spring Boot
-- Maven
+### 📦 Outros
+- Swagger/OpenAPI (documentação da API)
+- Docker (configuração opcional de ambiente)
 - Lombok
-- Flyway
-- MySQL
+- MapStruct (mapeamento DTOs)
 
-## Autor
 
-Desenvolvido por [Pericles Matos](https://www.linkedin.com/in/periclesm/).
+## 📚 Funcionalidades principais
+
+- [x] Cadastro de pacientes
+- [x] Cadastro de médicos
+- [x] Agendamento de consultas
+- [x] Cancelamento de consultas
+- [x] Validação de disponibilidade de médicos
+- [x] Integração com banco de dados via JPA
+- [x] Documentação Swagger em `/swagger-ui.html`
+- [x] Versionamento de banco com Flyway
+
+
+## ▶️ Como executar localmente
+
+### Pré-requisitos:
+- Java 17+
+- Maven
+- PostgreSQL (ou utilize H2 para testes)
+
+### Passos:
+```bash
+# Clone o projeto
+git clone https://github.com/periclesmatos/clinica-api-java
+
+# Acesse a pasta do projeto
+cd clinica-api-java
+
+# Rode a aplicação
+./mvnw spring-boot:run
+```
+
+> A aplicação estará disponível em: `http://localhost:8080`
+
+
+## 🧪 Executar os testes
+
+```bash
+./mvnw test
+```
+
+
+## 🔎 Swagger / Documentação da API
+
+Após rodar o projeto, acesse:
+
+> [`http://localhost:8080/swagger-ui.html`](http://localhost:8080/swagger-ui.html)
+
+
+## 🗂️ Estrutura do projeto
+
+```
+src
+├── main
+│   ├── java
+│   │   └── med.voll.api
+│   │       ├── controller
+│   │       ├── domain
+│   │       └── infra
+│   └── resources
+│       └── application.properties
+├── test
+│   └── ...
+```
+
+
+## 📌 Possíveis melhorias futuras
+
+- [ ] Autenticação JWT
+- [ ] Upload de exames/arquivos
+- [ ] Dashboard de atendimentos
+- [ ] Integração com serviços externos (ex: envio de email, WhatsApp)
+
+
+## 👨‍💻 Desenvolvido por
+
+**Péricles Matos**  
+🔗 [LinkedIn](https://www.linkedin.com/in/pericles-matos)  
+🐙 [GitHub](https://github.com/periclesmatos)
+
+
+## ⭐ Quer contribuir?
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests.
+
