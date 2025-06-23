@@ -48,10 +48,10 @@ Este projeto é uma **API RESTful** para gestão de uma clínica médica, desenv
 ### Passos:
 ```bash
 # Clone o projeto
-git clone https://github.com/periclesmatos/clinica-api-java
+git clone https://github.com/periclesmatos/gerenciador-clinica-api
 
 # Acesse a pasta do projeto
-cd clinica-api-java
+cd gerenciador-clinica-api
 
 # Rode a aplicação
 ./mvnw spring-boot:run
